@@ -1,2 +1,0 @@
-class Joy < ApplicationRecord
-end

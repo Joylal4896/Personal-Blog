@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :joys
+  resources :projects
   get 'joy', to: 'joys#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get  '', to: 'blog#index', constraints: {subdomain: 'blog'}
+  get  '', to: 'portfolio#index', constraints: {subdomain: 'portfolio'}
+  root to: 'home#index'
 end
